@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoffeePass — подписка на кофе</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .coffee-gradient-bg {
+        background: radial-gradient(
+          circle at top left,
+          #fef9c3,
+          #fed7aa 30%,
+          #f97316 60%,
+          #451a03 100%
+        );
+      }
+      .coffee-card-gradient {
+        background: linear-gradient(135deg, #fef3c7, #fee2e2);
+      }
+      .coffee-svg-shadow {
+        filter: drop-shadow(0 18px 40px rgba(77, 87, 109, 0.45));
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- Page wrapper -->
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header
+        class="border-b border-slate-800/80 bg-slate-950/90 backdrop-blur"
+      >
+        <div
+          class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <a href="#" class="flex items-center gap-2">
+            <div
+              class="h-9 w-9 rounded-2xl coffee-gradient-bg flex items-center justify-center"
+            >
+              <span class="text-xl font-semibold text-slate-900">C</span>
+            </div>
+            <div class="flex flex-col leading-tight">
+              <span class="font-semibold tracking-tight text-slate-50"
+                >CoffeePass</span
+              >
+              <span class="text-xs text-amber-200/70">подписка на кофе</span>
+            </div>
+          </a>
+          <nav class="hidden md:flex items-center gap-8 text-sm">
+            <a
+              href="#how"
+              class="text-slate-200/80 hover:text-amber-300 transition-colors"
+              >Как работает</a
+            >
+            <a
+              href="#pricing"
+              class="text-slate-200/80 hover:text-amber-300 transition-colors"
+              >Тарифы</a
+            >
+            <a
+              href="#reviews"
+              class="text-slate-200/80 hover:text-amber-300 transition-colors"
+              >Отзывы</a
+            >
+            <a
+              href="#faq"
+              class="text-slate-200/80 hover:text-amber-300 transition-colors"
+              >FAQ</a
+            >
+          </nav>
+          <div class="flex items-center gap-3">
+            <a
+              href="#apply"
+              class="hidden md:inline-flex px-4 py-2 rounded-full border border-amber-500/40 text-sm text-amber-200/90 hover:bg-amber-500/10 transition-colors"
+              >Оформить</a
+            >
+            <a
+              href="#apply"
+              class="md:hidden inline-flex px-4 py-2 rounded-full bg-amber-500 text-slate-950 text-sm font-semibold hover:bg-amber-400 transition-colors"
+              >Оформить</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="flex-1">
+        <!-- Hero -->
+        <section
+          class="border-b border-slate-800/80 bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900"
+        >
+          <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <!-- Left: text -->
+              <div>
+                <div
+                  class="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-slate-900/40 px-3 py-1 text-xs text-amber-200/90 mb-4"
+                >
+                  <span
+                    class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"
+                  ></span>
+                  Кофе по подписке в любом районе
+                </div>
+                <h1
+                  class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50 mb-4"
+                >
+                  Один абонемент — кофе каждый день в любимых точках города.
+                </h1>
+                <p class="text-slate-300/90 text-base md:text-lg max-w-xl mb-8">
+                  CoffeePass экономит время и деньги: оформляете подписку один
+                  раз, а потом просто забираете свой напиток в партнёрских
+                  кофейнях рядом с домом, работой или спортзалом.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 mb-5">
+                  <a
+                    href="#apply"
+                    class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-amber-500 text-slate-950 text-sm font-semibold shadow-lg shadow-amber-500/25 hover:bg-amber-400 transition-colors"
+                  >
+                    Оформить подписку
+                  </a>
+                  <a
+                    href="#pricing"
+                    class="inline-flex items-center justify-center px-5 py-3 rounded-full border border-slate-700 text-sm text-slate-100 hover:border-amber-400 hover:text-amber-200 transition-colors"
+                  >
+                    Посмотреть тарифы
+                  </a>
+                </div>
+                <div
+                  class="flex flex-wrap items-center gap-6 text-xs text-slate-400"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="h-6 w-6 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center text-amber-300 text-xs"
+                      >7</span
+                    >
+                    <span>до 7 000 ₽ экономии в месяц</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="h-6 w-6 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center text-amber-300 text-xs"
+                      >∞</span
+                    >
+                    <span>более 100 партнёрских кофеен</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: SVG illustration -->
+              <div class="relative flex items-center justify-center">
+                <div
+                  class="absolute inset-0 blur-3xl opacity-70 bg-gradient-to-br from-amber-500/40 via-rose-400/20 to-slate-900/0 pointer-events-none"
+                ></div>
+                <div
+                  class="relative w-full max-w-md aspect-square rounded-3xl bg-slate-900/80 border border-slate-800 shadow-[0_40px_80px_rgba(0,0,0,0.7)] flex items-center justify-center overflow-hidden"
+                >
+                  <svg
+                    viewBox="0 0 300 300"
+                    class="w-[88%] coffee-svg-shadow"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <linearGradient id="cupBody" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#fed7aa" />
+                        <stop offset="40%" stop-color="#fdba74" />
+                        <stop offset="100%" stop-color="#f97316" />
+                      </linearGradient>
+                      <linearGradient
+                        id="coffeeSurface"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="0"
+                      >
+                        <stop offset="0%" stop-color="#451a03" />
+                        <stop offset="45%" stop-color="#7c2d12" />
+                        <stop offset="100%" stop-color="#9a3412" />
+                      </linearGradient>
+                      <linearGradient
+                        id="foamHighlight"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="0"
+                      >
+                        <stop
+                          offset="0%"
+                          stop-color="#fefce8"
+                          stop-opacity="0.9"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#fef3c7"
+                          stop-opacity="0.1"
+                        />
+                      </linearGradient>
+                      <radialGradient id="saucer" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#0f172a" />
+                        <stop offset="100%" stop-color="#020617" />
+                      </radialGradient>
+                      <radialGradient id="steamGlow" cx="50%" cy="0%" r="70%">
+                        <stop
+                          offset="0%"
+                          stop-color="#fef9c3"
+                          stop-opacity="0.9"
+                        />
+                        <stop
+                          offset="60%"
+                          stop-color="#f97316"
+                          stop-opacity="0.2"
+                        />
+                        <stop
+                          offset="100%"
+                          stop-color="#020617"
+                          stop-opacity="0"
+                        />
+                      </radialGradient>
+                      <filter
+                        id="softBlur"
+                        x="-20%"
+                        y="-20%"
+                        width="140%"
+                        height="140%"
+                      >
+                        <feGaussianBlur stdDeviation="8" />
+                      </filter>
+                      <linearGradient
+                        id="beanGradient"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                      >
+                        <stop offset="0%" stop-color="#78350f" />
+                        <stop offset="100%" stop-color="#451a03" />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Background glow -->
+                    <ellipse
+                      cx="150"
+                      cy="130"
+                      rx="140"
+                      ry="120"
+                      fill="url(#steamGlow)"
+                      opacity="0.75"
+                    />
+
+                    <!-- Coffee beans -->
+                    <g transform="translate(40,70) rotate(-18)">
+                      <ellipse
+                        cx="0"
+                        cy="0"
+                        rx="16"
+                        ry="10"
+                        fill="url(#beanGradient)"
+                        opacity="0.9"
+                      />
+                      <path
+                        d="M-3 -9 Q 0 0 -3 9"
+                        stroke="#facc15"
+                        stroke-width="1.3"
+                        stroke-linecap="round"
+                        opacity="0.65"
+                      />
+                    </g>
+                    <g transform="translate(250,85) rotate(18)">
+                      <ellipse
+                        cx="0"
+                        cy="0"
+                        rx="14"
+                        ry="9"
+                        fill="url(#beanGradient)"
+                        opacity="0.85"
+                      />
+                      <path
+                        d="M-3 -8 Q 0 0 -3 8"
+                        stroke="#fde68a"
+                        stroke-width="1.1"
+                        stroke-linecap="round"
+                        opacity="0.6"
+                      />
+                    </g>
+                    <g transform="translate(60,210) rotate(-10)">
+                      <ellipse
+                        cx="0"
+                        cy="0"
+                        rx="12"
+                        ry="8"
+                        fill="url(#beanGradient)"
+                        opacity="0.8"
+                      />
+                      <path
+                        d="M-2.5 -7 Q 0 0 -2.5 7"
+                        stroke="#facc15"
+                        stroke-width="1"
+                        stroke-linecap="round"
+                        opacity="0.6"
+                      />
+                    </g>
+
+                    <!-- Saucer shadow -->
+                    <ellipse
+                      cx="150"
+                      cy="230"
+                      rx="95"
+                      ry="26"
+                      fill="#020617"
+                      opacity="0.8"
+                      filter="url(#softBlur)"
+                    />
+
+                    <!-- Saucer -->
+                    <ellipse
+                      cx="150"
+                      cy="220"
+                      rx="88"
+                      ry="22"
+                      fill="url(#saucer)"
+                    />
+                    <ellipse
+                      cx="150"
+                      cy="216"
+                      rx="55"
+                      ry="12"
+                      fill="#020617"
+                      opacity="0.9"
+                    />
+
+                    <!-- Cup body -->
+                    <path
+                      d="M95 105 H205 L195 200 Q193 214 150 218 Q107 214 105 200 Z"
+                      fill="url(#cupBody)"
+                    />
+                    <path
+                      d="M95 105 Q150 90 205 105 Q205 115 150 125 Q95 115 95 105Z"
+                      fill="#fee2c5"
+                    />
+
+                    <!-- Coffee surface -->
+                    <ellipse
+                      cx="150"
+                      cy="112"
+                      rx="48"
+                      ry="16"
+                      fill="url(#coffeeSurface)"
+                    />
+                    <ellipse
+                      cx="150"
+                      cy="108"
+                      rx="44"
+                      ry="11"
+                      fill="url(#foamHighlight)"
+                      opacity="0.95"
+                    />
+
+                    <!-- Cup rim highlight -->
+                    <path
+                      d="M102 105 Q150 92 198 105"
+                      fill="none"
+                      stroke="#fefce8"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      opacity="0.7"
+                    />
+
+                    <!-- Cup handle -->
+                    <path
+                      d="M205 122 Q235 120 242 145 Q248 170 225 183 Q205 192 195 175"
+                      fill="none"
+                      stroke="#fed7aa"
+                      stroke-width="11"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M205 130 Q227 130 231 146 Q235 162 220 170 Q210 175 202 168"
+                      fill="none"
+                      stroke="#f97316"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      opacity="0.9"
+                    />
+
+                    <!-- Cup front light -->
+                    <path
+                      d="M108 130 Q118 175 132 205"
+                      stroke="#fefce8"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      opacity="0.55"
+                    />
+
+                    <!-- Steam -->
+                    <g
+                      stroke="#fef9c3"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      opacity="0.9"
+                    >
+                      <path
+                        d="M132 70 Q125 52 135 38 Q145 26 140 14"
+                        fill="none"
+                      />
+                      <path
+                        d="M150 68 Q160 52 154 36 Q148 20 154 8"
+                        fill="none"
+                        opacity="0.9"
+                      />
+                      <path
+                        d="M168 72 Q178 58 174 44 Q170 30 178 20"
+                        fill="none"
+                        opacity="0.8"
+                      />
+                    </g>
+
+                    <!-- Tiny floating icons -->
+                    <circle
+                      cx="80"
+                      cy="80"
+                      r="4"
+                      fill="#f97316"
+                      opacity="0.75"
+                    />
+                    <circle
+                      cx="220"
+                      cy="70"
+                      r="3.5"
+                      fill="#facc15"
+                      opacity="0.8"
+                    />
+                    <circle
+                      cx="230"
+                      cy="150"
+                      r="3"
+                      fill="#fb7185"
+                      opacity="0.8"
+                    />
+
+                    <!-- Tag on saucer -->
+                    <rect
+                      x="122"
+                      y="190"
+                      width="56"
+                      height="20"
+                      rx="10"
+                      fill="#020617"
+                      opacity="0.9"
+                    />
+                    <text
+                      x="150"
+                      y="204"
+                      text-anchor="middle"
+                      font-size="9"
+                      fill="#e5e7eb"
+                      font-family="system-ui, -apple-system, BlinkMacSystemFont"
+                    >
+                      COFFEEPASS
+                    </text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="border-b border-slate-800/80 bg-slate-950">
+          <div class="max-w-6xl mx-auto px-6 py-14">
+            <div class="flex items-end justify-between gap-4 mb-10">
+              <div>
+                <h2
+                  class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-50 mb-2"
+                >
+                  Как работает CoffeePass
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Оформляете подписку один раз — дальше просто показываете
+                  QR‑код в партнёрской кофейне и забираете свой ежедневный
+                  напиток.
+                </p>
+              </div>
+              <span class="text-xs text-slate-500 hidden md:inline"
+                >Просто как подписка на музыку, только для кофе.</span
+              >
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+              <!-- Step 1 -->
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_22px_45px_rgba(0,0,0,0.45)]"
+              >
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="h-9 w-9 rounded-full bg-amber-500/15 border border-amber-400/60 flex items-center justify-center text-sm font-semibold text-amber-300"
+                  >
+                    1
+                  </div>
+                  <h3 class="font-semibold text-slate-50">
+                    Выберите тариф и оформите подписку
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  Подберите подходящий формат: от одного кофе в день до полного
+                  безлимита. Оплачиваете подписку онлайн и сразу получаете
+                  доступ к цифровому абонементу.
+                </p>
+              </div>
+              <!-- Step 2 -->
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_22px_45px_rgba(0,0,0,0.4)]"
+              >
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="h-9 w-9 rounded-full bg-emerald-500/15 border border-emerald-400/60 flex items-center justify-center text-sm font-semibold text-emerald-300"
+                  >
+                    2
+                  </div>
+                  <h3 class="font-semibold text-slate-50">
+                    Приходите в любую партнёрскую кофейню
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  Откройте CoffeePass, покажите персональный QR‑код на кассе —
+                  бариста увидит, что подписка активна, и оформит ваш напиток.
+                </p>
+              </div>
+              <!-- Step 3 -->
+              <div
+                class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 shadow-[0_22px_45px_rgba(0,0,0,0.4)]"
+              >
+                <div class="flex items-center gap-3 mb-4">
+                  <div
+                    class="h-9 w-9 rounded-full bg-sky-500/15 border border-sky-400/60 flex items-center justify-center text-sm font-semibold text-sky-300"
+                  >
+                    3
+                  </div>
+                  <h3 class="font-semibold text-slate-50">
+                    Забирайте кофе каждый день
+                  </h3>
+                </div>
+                <p class="text-sm text-slate-300">
+                  Один чек‑ин в день — и ваш капучино, американо или раф уже
+                  готов. Никаких доплат и сюрпризов, стоимость напитка уже в
+                  подписке.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing" class="border-b border-slate-800/80 bg-slate-950">
+          <div class="max-w-6xl mx-auto px-6 py-14">
+            <div class="flex items-end justify-between gap-4 mb-10">
+              <div>
+                <h2
+                  class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-50 mb-2"
+                >
+                  Тарифы на каждый день
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 max-w-xl">
+                  Выберите формат, который подходит вашему ритму. Во всех
+                  тарифах — фиксированная цена за напиток без скрытых доплат.
+                </p>
+              </div>
+              <div
+                class="hidden md:flex flex-col items-end text-xs text-slate-400"
+              >
+                <span>Можно перейти на другой тариф в любой момент.</span>
+                <span>Отмена подписки — в один клик.</span>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+              <!-- Start -->
+              <div
+                class="relative rounded-3xl border border-slate-800 bg-slate-900/80 p-6 flex flex-col shadow-[0_22px_45px_rgba(0,0,0,0.5)]"
+              >
+                <div class="mb-4">
+                  <p
+                    class="text-xs uppercase tracking-[0.16em] text-slate-500 mb-1"
+                  >
+                    Тариф
+                  </p>
+                  <h3 class="text-lg font-semibold text-slate-50">Start</h3>
+                </div>
+                <div class="mb-5">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-3xl font-semibold text-amber-400"
+                      >1 990 ₽</span
+                    >
+                    <span class="text-xs text-slate-400">в месяц</span>
+                  </div>
+                  <p class="text-xs text-slate-400 mt-1">
+                    ≈ 65 ₽ за чашку при ежедневном визите.
+                  </p>
+                </div>
+                <ul class="space-y-2 text-sm text-slate-300 mb-6">
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Один напиток в день в любой партнёрской кофейне.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Выбор базового меню: эспрессо, американо, капучино, фильтр.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Действует по будням с 7:00 до 18:00.
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <a
+                    href="#apply"
+                    class="inline-flex w-full items-center justify-center rounded-full border border-slate-700 px-4 py-2.5 text-sm text-slate-100 hover:border-amber-400 hover:text-amber-200 transition-colors"
+                  >
+                    Выбрать Start
+                  </a>
+                </div>
+              </div>
+
+              <!-- Plus -->
+              <div
+                class="relative rounded-3xl border border-amber-400/80 bg-slate-900/90 p-6 flex flex-col shadow-[0_26px_60px_rgba(248,250,252,0.06)] coffee-card-gradient"
+              >
+                <div
+                  class="absolute -top-3 right-5 px-3 py-1 rounded-full bg-amber-500 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-950 shadow-lg shadow-amber-500/40"
+                >
+                  Хит
+                </div>
+                <div class="mb-4">
+                  <p
+                    class="text-xs uppercase tracking-[0.16em] text-amber-900/80 mb-1"
+                  >
+                    Тариф
+                  </p>
+                  <h3 class="text-lg font-semibold text-slate-950">Plus</h3>
+                </div>
+                <div class="mb-5">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-3xl font-semibold text-slate-950"
+                      >2 790 ₽</span
+                    >
+                    <span class="text-xs text-slate-700">в месяц</span>
+                  </div>
+                  <p class="text-xs text-slate-700 mt-1">
+                    Дневной кофе без ограничений по дням недели.
+                  </p>
+                </div>
+                <ul class="space-y-2 text-sm text-slate-900 mb-6">
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600"
+                    ></span>
+                    Один напиток в день из расширенного меню, включая авторские
+                    рафы.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600"
+                    ></span>
+                    Действует каждый день, включая выходные и праздники.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600"
+                    ></span>
+                    Приоритетное обслуживание для подписчиков.
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <a
+                    href="#apply"
+                    class="inline-flex w-full items-center justify-center rounded-full bg-slate-950 px-4 py-2.5 text-sm font-semibold text-amber-100 hover:bg-slate-900 transition-colors border border-slate-900"
+                  >
+                    Выбрать Plus
+                  </a>
+                </div>
+              </div>
+
+              <!-- Pro -->
+              <div
+                class="relative rounded-3xl border border-slate-800 bg-slate-900/80 p-6 flex flex-col shadow-[0_22px_45px_rgba(0,0,0,0.55)]"
+              >
+                <div class="mb-4">
+                  <p
+                    class="text-xs uppercase tracking-[0.16em] text-slate-500 mb-1"
+                  >
+                    Тариф
+                  </p>
+                  <h3 class="text-lg font-semibold text-slate-50">Pro</h3>
+                </div>
+                <div class="mb-5">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-3xl font-semibold text-amber-400"
+                      >3 990 ₽</span
+                    >
+                    <span class="text-xs text-slate-400">в месяц</span>
+                  </div>
+                  <p class="text-xs text-slate-400 mt-1">
+                    Для тех, кто живёт в кофейнях — максимум свободы.
+                  </p>
+                </div>
+                <ul class="space-y-2 text-sm text-slate-300 mb-6">
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Два напитка в день: себе и коллеге или второй кофе позже.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Доступ к сезонному меню и альтернативным методам
+                    заваривания.
+                  </li>
+                  <li class="flex gap-2">
+                    <span
+                      class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"
+                    ></span>
+                    Ранний доступ к новым точкам и закрытым дегустациям.
+                  </li>
+                </ul>
+                <div class="mt-auto">
+                  <a
+                    href="#apply"
+                    class="inline-flex w-full items-center justify-center rounded-full border border-slate-700 px-4 py-2.5 text-sm text-slate-100 hover:border-amber-400 hover:text-amber-200 transition-colors"
+                  >
+                    Выбрать Pro
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Apply form -->
+        <section id="apply" class="border-b border-slate-800/80 bg-slate-950">
+          <div class="max-w-6xl mx-auto px-6 py-14">
+            <div class="grid md:grid-cols-2 gap-10 items-start">
+              <div>
+                <h2
+                  class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-50 mb-3"
+                >
+                  Оформите заявку на CoffeePass
+                </h2>
+                <p class="text-sm md:text-base text-slate-300 mb-6 max-w-md">
+                  Оставьте контакты — мы подтвердим доступность подписки в вашем
+                  городе, под
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
